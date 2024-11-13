@@ -3,121 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanket Bansod - Junior Software Engineer</title>
+    <title>Sanket Bansod - Portfolio</title>
     <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9fc;
             color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+            background-color: #f9f9fc;
         }
+
         .container {
-            max-width: 800px;
-            width: 90%;
-            margin: 20px;
+            max-width: 1200px;
+            margin: auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
         }
-        h1, h2 {
-            color: #4A90E2;
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
         }
-        p {
-            line-height: 1.6;
+
+        .header h1 {
+            font-size: 2em;
         }
-        ul {
-            padding-left: 20px;
-            line-height: 1.6;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .contact {
-            font-style: italic;
-            color: #555;
-        }
-        .project-link {
-            color: #4A90E2;
+
+        .header nav a {
+            color: #fff;
+            margin: 0 10px;
             text-decoration: none;
         }
-        .project-link:hover {
-            text-decoration: underline;
+
+        /* Introduction Section */
+        .intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #f4f4f9;
         }
+
+        .intro-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .intro-text h2 {
+            font-size: 3em;
+            color: #333;
+        }
+
+        .intro-text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .intro-text a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .intro-image {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('path/to/image.jpg'); /* Replace with actual image path */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px 20px;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #f4f4f9;
+            padding: 50px 20px;
+        }
+
+        .skills h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
         .skills-list {
-            list-style-type: disc;
-            margin: 0;
-            padding: 0;
-            padding-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skills-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .skills-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            padding: 50px 20px;
+        }
+
+        .certifications h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .certification-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .certification-item h3 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .intro {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .intro-text h2 {
+                font-size: 2em;
+            }
+
+            .intro-text p {
+                font-size: 1em;
+            }
+
+            .about h2, .skills h2, .certifications h2 {
+                font-size: 2em;
+            }
+
+            .skills-list {
+                flex-direction: column;
+            }
+
+            .skills-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .certification-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer p {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <!-- Header Section -->
+    <header class="header">
         <h1>Sanket Bansod</h1>
-        <p class="contact">Junior Software Engineer</p>
-        <p class="contact">Amravati, Maharashtra, India | 216 Connections | Open to Software Engineer, Software Developer, and Full-Stack Developer roles</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-        <div class="section">
-            <h2>About Me</h2>
-            <p>Welcome! I recently completed studies in Java and C# .NET with a strong foundation in object-oriented programming. My experience with MySQL DBMS has equipped me with solid database management skills.</p>
-            <p>Additionally, I’m passionate about web technologies, including HTML, JavaScript, and frameworks like Angular and React, allowing me to create responsive, dynamic web applications. My academic projects and competitions have provided me with hands-on development experience, and I’m always eager to learn and explore new technologies.</p>
-            <p>Currently, I'm seeking opportunities to apply my skills in a challenging work environment. Feel free to connect or reach out!</p>
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Hello, I'm Sanket Bansod</h2>
+            <p>A Junior Software Engineer based in Amravati, Maharashtra, specializing in web and software development.</p>
+            <a href="#">Download CV</a>
+            <a href="#contact">Get In Touch</a>
         </div>
+        <div class="intro-image"></div>
+    </section>
 
-        <div class="section">
-            <h2>Professional Experience</h2>
-            <h3>Junior Software Developer</h3>
-            <p><strong>Deutsche Telekom Clinical Solutions India Pvt. Ltd.</strong> | Pune, Maharashtra</p>
-            <p><em>Nov 2022 - Present</em> (2 years, 1 month)</p>
-            <p>Responsibilities:</p>
-            <ul class="skills-list">
-                <li>Developing and maintaining solutions using AngularJS, Oracle SQL, and other technologies</li>
-                <li>Collaborating with team members to enhance clinical software functionalities</li>
-            </ul>
-        </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Welcome! I recently completed studies in Java and C# .NET with a strong foundation in object-oriented programming. My experience with MySQL DBMS has equipped me with solid database management skills, and I'm well-versed in developing solutions using both front-end and back-end technologies.</p>
+    </section>
 
-        <div class="section">
-            <h2>Education</h2>
-            <h3>Institute for Advanced Computing and Software Development (IACSD)</h3>
-            <p>Post Graduate Diploma in Advanced Computing (DAC) | Mar 2022 - Sep 2022</p>
-            <p>Focused on emerging technologies, preparing students for the dynamic IT industry.</p>
-            <h3>Prof. Ram Meghe Institute of Technology & Research</h3>
-            <p>Bachelor's Degree in Mechanical Engineering | May 2016 - Aug 2020</p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skills-item">
+                <h3>Programming Languages</h3>
+                <p>Java, C#, SQL, Oracle SQL</p>
+            </div>
+            <div class="skills-item">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skills-item">
+                <h3>Frameworks & Tools</h3>
+                <p>Spring Boot, Visual Studio 2022, NHibernate</p>
+            </div>
+            <div class="skills-item">
+                <h3>Database Management</h3>
+                <p>MySQL, Oracle SQL</p>
+            </div>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Licenses & Certifications</h2>
-            <ul class="skills-list">
-                <li><strong>Google Data Analyst (Foundation)</strong> - Coursera, Issued Oct 2021</li>
-                <li><strong>Microsoft AI Classroom Series</strong> - Microsoft, Issued Jun 2021</li>
-                <li><strong>Programming Essentials in C</strong> - Cisco Networking Academy, Issued Jul 2020</li>
-                <li><strong>Career Edge - Knockdown the Lockdown</strong> - TCS iON, Issued Apr 2020, Credential ID: 5-6901284-1016</li>
-                <li><strong>The Fundamentals of Digital Marketing</strong> - Google, Issued Mar 2020, Credential ID: GUL C9W A8K</li>
-            </ul>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <h2>Certifications</h2>
+        <div class="container">
+            <div class="certification-item">
+                <h3>Google Data Analyst (Foundation)</h3>
+                <p>Issued by Coursera, Oct 2021</p>
+            </div>
+            <div class="certification-item">
+                <h3>Microsoft AI Classroom Series</h3>
+                <p>Issued by Microsoft, Jun 2021</p>
+            </div>
+            <div class="certification-item">
+                <h3>Programming Essentials in C</h3>
+                <p>Issued by Cisco Networking Academy, Jul 2020</p>
+            </div>
+            <div class="certification-item">
+                <h3>Career Edge - Knockdown the Lockdown</h3>
+                <p>Issued by TCS iON, Apr 2020</p>
+                <p>Credential ID: 5-6901284-1016</p>
+            </div>
+            <div class="certification-item">
+                <h3>The Fundamentals of Digital Marketing</h3>
+                <p>Issued by Google, Mar 2020</p>
+                <p>Credential ID: GUL C9W A8K</p>
+            </div>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <h3>Hotel Booking Management System</h3>
-            <p>Associated with Institute for Advanced Computing and Software Development (IACSD)</p>
-            <p><a href="https://github.com/SanketBansod174/Hotel-Booking-Management-System" target="_blank" class="project-link">GitHub Repository</a></p>
-            <p>Technologies Used: Java, React.js</p>
-        </div>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Oracle SQL - Endorsed as Junior Software Developer at Deutsche Telekom</li>
-                <li>AngularJS - Endorsed as Junior Software Developer at Deutsche Telekom</li>
-                <!-- Add more skills if necessary -->
-            </ul>
-        </div>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sanket Bansod</p>
+    </footer>
 
 </body>
 </html>
